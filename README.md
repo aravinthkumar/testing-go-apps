@@ -11,4 +11,12 @@ Several test commands which can be used,
 - `go test -coverprofile cover.out` prints out the coverage details into a `cover.out` file.
 - `go tool cover -func cover.out` to open the coverage details in the terminal using go tool
 - `go tool cover -html cover.out` to open the coverage details in the browser using go tool
+
+
+##  To Do 
+
+- Table driven Test 
+- Learning Notes
+
+
   
