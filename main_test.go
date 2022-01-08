@@ -1,9 +1,12 @@
+// The name should be test to be identified by the test constracts as test package
+// This will not be bundled with the binary
 package main_test
 
 import (
 	"testing"
 )
 
+//  The function should start with Test to make the test constracts to know this is the test method
 func TestAddition(t *testing.T) {
 	a := 1
 	b := 2
