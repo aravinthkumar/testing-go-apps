@@ -14,18 +14,10 @@ func TestGreet(T *testing.T) {
 	}
 }
 
-func TestDepart(T *testing.T) {
-	actual := Depart("Gophers")
-	expected := "Bye, Gophers"
-	if actual != expected {
-		T.Errorf("Greet didn't matched, actual: '%v' but expected: '%v' ", actual, expected)
-	}
-}
-
-// Two types of Failures present 1.) Immediate using the Fatal method 2.) Not -immediate using the error method
-//The following method is to test the error and fatal, when this is run after the fatal nothing is executed
-func TestErrorBehavior(T *testing.T) {
-	T.Error("This is very errorneous")
-	T.Fatalf("This is fatal")
-	T.Errorf("This is also errorneous")
-}
+// func TestDepart(T *testing.T) {
+// 	actual := Depart("Gophers")
+// 	expected := "Bye, Gophers"
+// 	if actual != expected {
+// 		T.Errorf("Greet didn't matched, actual: '%v' but expected: '%v' ", actual, expected)
+// 	}
+// }
