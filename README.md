@@ -12,12 +12,31 @@ Several test commands which can be used,
 - `go tool cover -func cover.out` to open the coverage details in the terminal using go tool
 - `go tool cover -html cover.out` to open the coverage details in the browser using go tool
 
+## Special Type of Test : Table Driven Tests
 
+- Here a single function is tested against all possible scenarios.
+
+> following example shows where multiple scenarios are run against the function.
+
+```go 
+	scenarios := []struct {
+		input  string
+		output string
+	}{
+		{input: "Gophers", output: "Hello, Gophers"},
+		{input: "", output: "Hello,   "},
+	}
+	for _, s := range scenarios {
+		result := Greet(s.input)
+		if result != s.output {
+			T.Errorf(" Greet didn't match, actual: '%v' but expected: '%v'", result, s.output)
+		}
+	}
+```
 
 
 ##  To Do 
 
-- Table driven Test 
 - Learning Notes
 - Benchmarking Test
 - Profiling Test
