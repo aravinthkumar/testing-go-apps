@@ -34,12 +34,19 @@ Several test commands which can be used,
 	}
 ```
 
+### Benchmarking & Profiling Tests
 
-##  To Do 
+**Benchmarking**
 
-- Learning Notes
-- Benchmarking Test
-- Profiling Test
+`go test -bench .` to run the benchmark tests and other tests.
+`go test -bench <testnmae>` to run a particular benchmark test
+`go test -bench . -benchtime 10s` by default it stickts to one second of benchmark, with `benchtime` flag it can run for specified number of time.
 
 
-  
+**Profiling**
+
+`go test -bench . -benchmem` to report memory allocation statistics for benchmark.
+`go test -trace {trace.out}` Record execution trace to {trace.out} for analysis
+`go test -{type}profile {file}` (block,cover,cpu,mem,mutex)
+- for e.g `go test -bench <test> -memprofile profile.out` to generate a report for memory allocation profile.
+- for e.g. `go tool pprof profile.out` to generate report in other formats such as `svg` , `png` ....
