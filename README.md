@@ -13,10 +13,14 @@ Several test commands which can be used,
 - `go tool cover -html cover.out` to open the coverage details in the browser using go tool
 
 
+
+
 ##  To Do 
 
 - Table driven Test 
 - Learning Notes
+- Benchmarking Test
+- Profiling Test
 
 
   
